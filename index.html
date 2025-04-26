@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Vanta animation background -->
   <div id="vanta-bg"></div>
 
   <header>
@@ -25,17 +26,19 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h2>Empowering Industry Through Engineering Simulation</h2>
-      <p>High-fidelity simulation, mechanical design, and optimization solutions for your toughest engineering challenges.</p>
-      <a class="button" href="#contact">Partner With Us</a>
+      <h2><span id="typing-text"></span><span class="cursor">|</span></h2>
+      <p class="fade-in">High-fidelity simulation, mechanical design, and optimization solutions for your toughest engineering challenges.</p>
+      <a class="button fade-in" href="#contact">Partner With Us</a>
     </div>
   </section>
 
+  <!-- About Section -->
   <section class="section" id="about">
     <h2>About NumSmu</h2>
     <p>NumSmu is a passionate engineering community with members from IIT(ISM) Dhanbad and industry professionals. We specialize in simulation and design services across industries like petrochemicals, aerospace, defense, oil & gas, and manufacturing.</p>
   </section>
 
+  <!-- Services Section -->
   <section class="section" id="services">
     <h2>Our Services</h2>
     <ul>
@@ -47,9 +50,9 @@
     </ul>
   </section>
 
+  <!-- Learn Section -->
   <section class="section" id="curriculum">
     <h2>Learn With Us</h2>
-
     <h3>CAD Design Track</h3>
     <ul>
       <li>SolidWorks Basics, Assemblies, Sheet Metal, Motion Studies</li>
@@ -70,24 +73,26 @@
 
     <h3>Resources</h3>
     <ul>
-      <li><a href="https://www.ansys.com/products/fluids/ansys-fluent">ANSYS Fluent</a></li>
-      <li><a href="https://www.youtube.com/user/SolidWorksCorp">SolidWorks Tutorials</a></li>
-      <li><a href="https://sciml.ai/">SciML (Julia)</a></li>
+      <li><a href="https://www.ansys.com/products/fluids/ansys-fluent" target="_blank">ANSYS Fluent</a></li>
+      <li><a href="https://www.youtube.com/user/SolidWorksCorp" target="_blank">SolidWorks Tutorials</a></li>
+      <li><a href="https://sciml.ai/" target="_blank">SciML (Julia)</a></li>
     </ul>
   </section>
 
+  <!-- Team Section -->
   <section class="section" id="team">
     <h2>Our Team</h2>
     <p>Our team includes students from IIT(ISM) Dhanbad and experienced industry professionals, combining academic depth and practical expertise.</p>
   </section>
 
+  <!-- Contact Section -->
   <section class="section" id="contact">
     <h2>Contact Us</h2>
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <input type="submit" value="Send Message">
+      <input type="submit" value="Send Message" />
     </form>
     <p>Email: <a href="mailto:numsmu.community@gmail.com">numsmu.community@gmail.com</a></p>
   </section>
@@ -96,24 +101,39 @@
     <p>&copy; 2025 NumSmu. All rights reserved.</p>
   </footer>
 
-  <!-- Vanta Background Script -->
+  <!-- Scripts -->
   <script src="three.r134.min.js"></script>
   <script src="vanta.net.min.js"></script>
   <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      VANTA.NET({
-        el: "#vanta-bg",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x00bcd4,
-        backgroundColor: 0x000000
-      });
+    VANTA.NET({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x00bcd4,
+      backgroundColor: 0x000000
     });
+  </script>
+
+  <!-- Typing Effect -->
+  <script>
+    const text = "Empowering Industry Through Engineering Simulation";
+    const typingTarget = document.getElementById("typing-text");
+    let i = 0;
+
+    function typeText() {
+      if (i < text.length) {
+        typingTarget.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeText, 40);
+      }
+    }
+
+    window.onload = typeText;
   </script>
 </body>
 </html>
