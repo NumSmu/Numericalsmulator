@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Vanta animation background -->
-  <div id="vanta-bg"></div>
+  <!-- Animated Background -->
+  <div class="animated-bg"></div>
 
   <header>
     <img src="FullLogo.png" alt="NumSmu Logo" />
@@ -27,8 +27,8 @@
   <section class="hero">
     <div class="hero-content">
       <h2><span id="typing-text"></span><span class="cursor">|</span></h2>
-      <p class="fade-in">High-fidelity simulation, mechanical design, and optimization solutions for your toughest engineering challenges.</p>
-      <a class="button fade-in" href="#contact">Partner With Us</a>
+      <p>High-fidelity simulation, mechanical design, and optimization solutions for your toughest engineering challenges.</p>
+      <a class="button" href="#contact">Partner With Us</a>
     </div>
   </section>
 
@@ -101,25 +101,7 @@
     <p>&copy; 2025 NumSmu. All rights reserved.</p>
   </footer>
 
-  <!-- Scripts -->
-  <script src="three.r134.min.js"></script>
-  <script src="vanta.net.min.js"></script>
-  <script>
-    VANTA.NET({
-      el: "#vanta-bg",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x00bcd4,
-      backgroundColor: 0x000000
-    });
-  </script>
-
-  <!-- Typing Effect -->
+  <!-- Typing Effect Script -->
   <script>
     const text = "Empowering Industry Through Engineering Simulation";
     const typingTarget = document.getElementById("typing-text");
@@ -129,7 +111,7 @@
       if (i < text.length) {
         typingTarget.innerHTML += text.charAt(i);
         i++;
-        setTimeout(typeText, 40);
+        setTimeout(typeText, 50);
       }
     }
 
