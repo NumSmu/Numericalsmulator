@@ -24,9 +24,11 @@
   </nav>
 
   <section class="hero">
-    <h2>Empowering Industry Through Engineering Simulation</h2>
-    <p>High-fidelity simulation, mechanical design, and optimization solutions for your toughest engineering challenges.</p>
-    <a class="button" href="#contact">Partner With Us</a>
+    <div class="hero-content">
+      <h2>Empowering Industry Through Engineering Simulation</h2>
+      <p>High-fidelity simulation, mechanical design, and optimization solutions for your toughest engineering challenges.</p>
+      <a class="button" href="#contact">Partner With Us</a>
+    </div>
   </section>
 
   <section class="section" id="about">
@@ -94,21 +96,23 @@
     <p>&copy; 2025 NumSmu. All rights reserved.</p>
   </footer>
 
-  <!-- Vanta Background Scripts -->
+  <!-- Vanta Background Script -->
   <script src="three.r134.min.js"></script>
   <script src="vanta.net.min.js"></script>
   <script>
-    VANTA.NET({
-      el: "#vanta-bg",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x00bcd4,
-      backgroundColor: 0x111111
+    window.addEventListener("DOMContentLoaded", () => {
+      VANTA.NET({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x00bcd4,
+        backgroundColor: 0x000000
+      });
     });
   </script>
 </body>
