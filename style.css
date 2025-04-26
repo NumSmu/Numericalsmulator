@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -12,18 +13,29 @@ html, body {
   overflow-x: hidden;
 }
 
-#vanta-bg {
+/* Animated Gradient Background */
+.animated-bg {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  z-index: -1;
 }
 
-body > *:not(#vanta-bg) {
-  position: relative;
-  z-index: 1;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Header */
@@ -39,7 +51,7 @@ header img {
   margin-bottom: 1rem;
 }
 
-/* Nav */
+/* Navigation */
 nav {
   display: flex;
   justify-content: center;
@@ -72,8 +84,6 @@ nav a:hover {
 
 .hero-content {
   max-width: 800px;
-  animation: fadeInUp 1.5s ease-out forwards;
-  opacity: 0;
 }
 
 .hero h2 {
@@ -95,9 +105,6 @@ nav a:hover {
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  opacity: 0;
-  animation: fadeInUp 1.5s ease-out forwards;
-  animation-delay: 1s;
 }
 
 .button {
@@ -108,24 +115,10 @@ nav a:hover {
   font-weight: bold;
   border-radius: 5px;
   transition: background 0.3s;
-  opacity: 0;
-  animation: fadeInUp 1.5s ease-out forwards;
-  animation-delay: 1.5s;
 }
 
 .button:hover {
   background-color: #0097a7;
-}
-
-@keyframes fadeInUp {
-  0% {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 /* Sections */
@@ -170,7 +163,7 @@ footer {
   color: white;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
   .hero h2 {
     font-size: 2rem;
