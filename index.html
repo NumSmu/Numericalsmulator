@@ -3,92 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NumSmu | Engineering Simulation</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>NumSmu - Design, Simulate, Optimize</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="vanta-bg"></div>
+
   <header>
-    <img src="FullLogo_NoBuffer.png" alt="NumSmu Logo" />
-    <h1>NumSmu Lab</h1>
-    <p>Numerical Simulation | Design | Optimization | Innovation</p>
+    <h1>Welcome to NumSmu</h1>
+    <p class="subtitle">Design | Simulate | Optimize</p>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#curriculum">Learn</a>
-    <a href="#team">Team</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <section class="content">
+    <h2>About Us</h2>
+    <p>NumSmu is a vibrant technical community of IIT (ISM) Dhanbad students and professionals focused on solving real-world problems in petrochemicals, aerospace, defense, and more. We specialize in CAD, FEA, CFD, optimization, and scientific computing using SolidWorks, Ansys, Python, Julia, and more.</p>
 
-  <section class="hero">
-    <h2>Empowering Industry Through Engineering Simulation</h2>
-    <p>High-fidelity simulation, mechanical design, and optimization solutions for your toughest engineering challenges.</p>
-    <a class="button" href="#contact">Partner With Us</a>
-  </section>
-
-  <section class="section" id="about">
-    <h2>About NumSmu</h2>
-    <p>NumSmu is a passionate engineering community with members from IIT(ISM) Dhanbad and industry professionals. We specialize in simulation and design services across industries like petrochemicals, aerospace, defense, oil & gas, and manufacturing.</p>
-  </section>
-
-  <section class="section" id="services">
-    <h2>Our Services</h2>
+    <h2>Courses We Offer</h2>
     <ul>
-      <li>CAD Modeling (SolidWorks)</li>
-      <li>CFD/FEA Simulations (ANSYS)</li>
-      <li>Scientific Computing (Python, Julia)</li>
-      <li>Design Optimization</li>
-      <li>ML-based Engineering Models</li>
-    </ul>
-  </section>
-
-  <section class="section" id="curriculum">
-    <h2>Learn With Us</h2>
-    <h3>CAD Design Track</h3>
-    <ul>
-      <li>SolidWorks Basics, Assemblies, Sheet Metal, Motion Studies</li>
-      <li>Participate in CAD Competitions</li>
+      <li>CAD Design (SolidWorks, Assembly, Sheet Metal)</li>
+      <li>Scientific Computing with Python & Julia</li>
+      <li>Machine Learning for Simulations</li>
+      <li>FEA & CFD using Ansys</li>
     </ul>
 
-    <h3>Simulation Track</h3>
-    <ul>
-      <li>ANSYS Fluent & Structural Modules</li>
-      <li>Flow Over Cylinder, Mesh Studies, Heat Transfer</li>
-    </ul>
-
-    <h3>Scientific Computing</h3>
-    <ul>
-      <li>Python, NumPy, SciPy, Matplotlib</li>
-      <li>Julia & ModelingToolkit.jl</li>
-    </ul>
-
-    <h3>Resources</h3>
-    <ul>
-      <li><a href="https://www.ansys.com/products/fluids/ansys-fluent">ANSYS Fluent</a></li>
-      <li><a href="https://www.youtube.com/user/SolidWorksCorp">SolidWorks Tutorials</a></li>
-      <li><a href="https://sciml.ai/">SciML (Julia)</a></li>
-    </ul>
-  </section>
-
-  <section class="section" id="team">
-    <h2>Our Team</h2>
-    <p>Our team includes students from IIT(ISM) Dhanbad and experienced industry professionals, combining academic depth and practical expertise.</p>
-  </section>
-
-  <section class="section" id="contact">
     <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <input type="submit" value="Send Message">
+    <form action="https://formspree.io/f/yourFormID" method="POST">
+      <label>Your Name:<br><input type="text" name="name" required></label><br><br>
+      <label>Email:<br><input type="email" name="email" required></label><br><br>
+      <label>Message:<br><textarea name="message" rows="4" required></textarea></label><br><br>
+      <button type="submit">Send Message</button>
     </form>
-    <p>Email: <a href="mailto:numsmu.community@gmail.com">numsmu.community@gmail.com</a></p>
   </section>
 
-  <footer>
-    <p>&copy; 2025 NumSmu. All rights reserved.</p>
-  </footer>
+  <!-- VANTA Background Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script>
+    VANTA.NET({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0xff3c00,
+      backgroundColor: 0x0a0a0a
+    });
+  </script>
 </body>
 </html>
